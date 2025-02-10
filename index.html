@@ -45,6 +45,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         	function coldAdd(){
             		cold_count = cold_count + 1;
         	}
+		function showResult(){
+			var resultText = document.getElementById("result");
+			resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; 
+		}
   	</script>
    </head> 
 
@@ -152,12 +156,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <div class="page" id="six">
 	<div class="w3-container w3-flat-carrot">
-		<h1>Result</h1>
+		<h1>Result Page</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
 		<p id="results">Results here:</p>    
-		<a href="#script" class="w3-btn w3-black"> Click Here! </a>
+		<a onclick="showResult();" class="w3-btn w3-black"> Click Here! </a>
 	<script>
 		var resultText = document.getElementById("result");
 		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; 
